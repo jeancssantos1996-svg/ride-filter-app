@@ -22,8 +22,8 @@ jobs:
 
     - name: Install Gradle 8.2.2 manually
       run: |
-        wget https://services.gradle.org/distributions/gradle-8.2.2-bin.zip
-        sudo unzip -d /opt/gradle gradle-8.2.2-bin.zip
+        wget -q https://services.gradle.org/distributions/gradle-8.2.2-bin.zip -O gradle-8.2.2-bin.zip
+        sudo unzip -q -d /opt/gradle gradle-8.2.2-bin.zip
         echo "/opt/gradle/gradle-8.2.2/bin" >> $GITHUB_PATH
 
     - name: Build with Gradle 8.2.2
